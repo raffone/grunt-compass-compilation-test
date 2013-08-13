@@ -1,10 +1,12 @@
 {
-  "name": "Compass",
+  "name": "compass",
   "devDependencies": {
     "grunt-lib-contrib": "~0.3.0",
     "grunt": "~0.4.1",
     "grunt-contrib-compass": "~0.5.0",
-    "grunt-compass-multiple": "~0.1.4"
+    "grunt-compass-multiple": "~0.1.4",
+    "time-grunt": "~0.1.1",
+    "grunt-contrib-sass": "~0.4.1"
   },
   "main": "Gruntfile.js"
 }

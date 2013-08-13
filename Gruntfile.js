@@ -1,7 +1,10 @@
 module.exports = function(grunt) {
 
+	require('time-grunt')(grunt);
+
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-compass-multiple');
+	grunt.loadNpmTasks('grunt-contrib-sass');
 
 	grunt.initConfig({
 
@@ -24,10 +27,25 @@ module.exports = function(grunt) {
 					cssDir: 'grunt-compass-multiple/'
 				}
 			}
+		},
+
+
+		sass: {
+			dist: {
+				options: {
+					style: 'compressed',
+					compass: true,
+				},
+				files: {
+			        'grunt-contrib-sass/foundation.css': 'scss/foundation.scss',
+        			'grunt-contrib-sass/normalize.css': 'scss/normalize.scss'
+				}
+			}
 		}
+
 
 	});
 
-	grunt.registerTask('default', ['compass', 'compassMultiple']);
+	grunt.registerTask('default', ['compass', 'compassMultiple', 'sass']);
 
 };
